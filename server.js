@@ -9,22 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var reservations = [
-    {
-
-        name: "Michael",
-        phoneNumber: "6197883033",
-        email: "michaeljohnson729gmail.com",
-        userName: "Michael"
-    }
+    
 ]
 var waitList = [
-    {
-
-        name: "Michael",
-        phoneNumber: "6197883033",
-        email: "michaeljohnson729gmail.com",
-        userName: "Mike"
-    }
+    
 ]
 
 app.get("/", function (req, res) {
@@ -59,12 +47,7 @@ app.post("/api/reservations", function (req, res) {
     res.json(newreservation);
 });
 
-app.post("/api/waitlist", function (req, res) {
-    var newwaitlist = req.body;
-    console.log(newwaitlist);
-    waitList.push(newwaitlist);
-    res.json(newwaitlist);
-});
+
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
